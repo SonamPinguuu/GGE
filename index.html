@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ideal Home for UNB Student</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Ideal Home for UNB Students</h1>
+        </div> 
+        <div class="content">
+            <nav>
+                <ul>
+                    <li><a class="b" href="#Phase1">Phase1</a></li>
+                    <li><a class="b" href="#Phase2">Phase2</a></li>
+                    <li><a class="b" href="#Phase3">Phase3</a></li>
+                    <li><a class="b" href="#Phase4">Phase4</a></li>
+                    <li><a class="b" href="#WebApp">WebApp</a></li>
+                </ul>
+            </nav>
+            <br><br>
+        </div>          
+        <div class="content" id="Phase1">
+            <h3>Introduction (Phase 1)</h3>
+            <p>
+                University of New Brunswick (UNB) stands as an icon of academic excellence in the world, renowned for its unwavering commitment to scholarship, innovation, and engagements. 
+                Each year, UNB’s reputation draws a diverse group of students from all over the world, spanning locals, nationals, and internationals. 
+                Students travel thousands of kilometers to come to Fredericton, which would be their home for the next four or five years.
+            </p>
+            <p>
+                The concept of ‘home’ holds profound significance for UNB students rather than being a mere accommodation. 
+                This ‘home’ should be ideal with easy transport, accessible entertainment and recreational centres, and importantly closer stores. 
+                This project is going to look into this matter and help new UNB students choose where they call ‘home’ effectively. 
+            </p>
+            <br>
+            <img src="Images/UNB.jpg" class="small-image">
+            <p class="caption"><b>Study Area:</b></p>
+            <img src="Images/Picture1.png " class="small-image2">
+            <p>Fredericton, NB</p>
+        </div>
+        <div class="content" id="Phase2">
+            <h3>Data Collection(phase 2)</h3>
+            <p>To analyze an ideal location for a UNB student to reside, datasets required for the analysis would be bus transit data, bus stop data, general UNB location data, major grocery store data, parks and gym location data.<br><br>
+                The datasets used are mentioned below:
+            </p>
+            <br>
+                <table>
+                    <tr>
+                        <th>SL</th>
+                        <th>Data</th>
+                        <th>Description</th>
+                        <th>Link</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Building Outline</td>
+                        <td> A polygon layer representing the physical area of buildings. The data was originally digitized from high-resolution aerial photography collected in 2002.</td>
+                        <td><a href = "https://data-fredericton.opendata.arcgis.com/datasets/188a1251c96d4035a0b557da9dca2fc8_9/explore?location=45.948050%2C-66.664662%2C12.00">Link to data</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Fredericton Transit Routes</td>
+                        <td> Bus routes in the city of Fredericton.</td>
+                        <td><a href ="https://data-fredericton.opendata.arcgis.com/maps/3935d3f0f30341abbb256bbe1ecc5203/about">Link to data</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Fredericton Bus Stop:</td>
+                        <td>Bus Stop locations in Fredericton.</td>
+                        <td><a href = "https://data-fredericton.opendata.arcgis.com/datasets/44943786a01b416b8c6087146883b37e_0/explore?location=45.958049%2C-66.673259%2C12.77">Link to data</a></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>City Trails</td>
+                        <td>Cycling or Walking trails in the city of Fredericton.</td>
+                        <td><a href ="https://data-fredericton.opendata.arcgis.com/datasets/a68e501ed22d45438ffd0d46cc2cd87c_16/explore?location=45.964444%2C-66.677645%2C12.48">Link to data</a></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Grocery Stores</td>
+                        <td>Locations of major grocery stores such as Walmart, Sobeys, etc.</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Parks and Open Space</td>
+                        <td>Parks and Open Spaces which are maintained by the City of Fredericton.</td>
+                        <td><a href="https://data-fredericton.opendata.arcgis.com/datasets/0e9f0049859f402383a44c97eca7e0e4_10/explore?location=45.959681%2C-66.675837%2C12.41">Link to data</a></td>
+
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Neighborhood</td>
+                        <td>City of Fredericton neighborhoods.</td>
+                        <td><a href = "https://data-fredericton.opendata.arcgis.com/datasets/3b3c641af58e4acfbee5603a34297ccf_0/explore?location=45.945310%2C-66.666971%2C12.30">Link to data</a></td>
+                    </tr>
+                </table>
+        </div>
+        <div class="content" id="Phase3">
+            <h3>Data paration(phase 3)</h3>
+            <p>Firstly, bus stops and bus transits in and around UNB needs to be analyzed. Following is a map showing bus stops and routes near UNB:
+                We can see that there are a lot of bus stops near UNB and even a bus route within the UNB campus. 
+                
+            </p>
+            <img src="Maps/Bus Transit Around UNB.jpg" class="small-image3">
+            <br>
+            <p>Next, houses and apartments near UNB with recreational parks and cycle/walking trails needs to be analyzed to find a location of an ideal home. The following map shows these locations near UNB: From this map, we know that there are plenty of options for our ideal home.
+                We now just need to create a buffer of our desired size around the UNB campus.
+            </p>
+            <img src="Maps/Apartment and Houses.jpg" class ="small-image4">
+            <br>
+            <p>Finally, some major grocery stores such as Walmart, Sobeys, Atlantic Superstore, Victory Meat Market, near UNB are shown in the following map:
+                We also need to create a buffer around the shops and intersect it with our UNB campus buffer to find the ideal location. 
+            </p>
+            <img src="Maps/Shops Near UNB.jpg" class="small-image4">
+            <br>
+            <p>For an ideal location for home, UNB students must not need to travel long to get to UNB. Ideally, any houses or apartments within 800m of UNB campus would be great. The following map shows these potential locations:</p>
+            <img src="Maps/within800m.jpg" class ="small-image5">
+            <br>
+        </div>
+        <div class="content" id="Phase4">
+            <h3>Data Processing/Analysis (Phase 4)</h3>
+            <p>
+                Initially, I filtered out the apartments and houses in Fredericton from the building outline data which contained the outlines of all building using query.
+                Then, a 800m buffer was created around the UNB campus. Houses and Apartments within that buffer was selected and exported to a new feature class. 
+                <br><br>
+                The image on the left shows all the houses and apartments in Fredericton. The image on the right shows the houses and apartments within 800m buffer of UNB campus.
+                Drag the slider to see the before and after. 
+            </p>
+            <div class="image-comparison">
+                <div class="images-container">
+                    <img class="before-image" src="Images/comp1.png" alt="">
+                    <img class="after-image" src="Images/comp2.png" alt="">
+                    <div class="slider-line"></div>
+                    <div class="slider-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+                          </svg>      
+                    </div>
+                    <input type="range" class="slider" min="0" max="100">
+                </div>
+            </div>
+            <p>
+                Additionally, a 1500m buffer from major grocery stores was created and intersected with UNB campus buffer to find an ideal location for residency. The following model from Model builder 
+                shows this process. 
+            </p>
+            <img class="model" src="Model/Model 1.svg">
+            <p>
+                Having a bus stop within 100 metres of an ideal home is important for several reasons such as easier mobility, sustainable transportation practices, and alleviating traffic congestions in communities.
+                Thus, having a bus stop near our ideal home is important. The bus stop should be within 100m of the location so that the student would not need to travel long to access the bus transportation. For this, I created a 100m buffer of every bus stations within 
+                the 800m buffer of UNB campus. Then, I selected every houses/apartments within that 100m buffer and exported it to a new feature class. The following model shows this process: 
+            </p>
+            <img class="model" src="Model/Model2.svg">
+            <p>
+                I originally intended for the parks to be within 5000m of the ideal locations. Since, almost every park in Fredericton were within that range, I did not need any additional geoprocessing for this. The
+                trails were also connected to every parks so it was convenient. 
+            </p>
+            <p>
+                After all the geoprocessing, approximately 380 houses/apartments were chosen as ideal place for students. The data or an excel table showing the information on these houses showing their address, property type, and more are given below. Click on the Button to access the table.
+            </p>
+            <a class="button" href="https://unbcloud-my.sharepoint.com/:x:/g/personal/k47z7_unb_ca/EbeFJy9-ug9Ft5YN7fjgOg4B5YxMgEEygPpdV2KcyzsLPw?e=dMqohA">
+                Home Data Table
+            </a>
+        </div>
+        <div class="content" id="WebApp">
+            <h3>Web App (Phase 5)</h3>
+            <p>
+                On this Phase of the project, I worked more on the Web App and improved the website and finalized the project. I also made an Story map in this phase of the project that I have linked below.
+                The following shows the final Web App showing the ideal locations of houses, bus stops near houses, grocery stores, and parks. 
+            </p>
+            <iframe class="frame-map" src="https://unbgis.maps.arcgis.com/apps/instant/basic/index.html?appid=f43ef78475a94b1794b3d112378d8b5e" >iFrames are not supported on this page</iframe>
+            <p><br><br></p>
+            <p> The Link to Story Map: </p>
+            <p>
+                <a class="button" href="https://arcg.is/0qfSay">
+                    Story Map
+                </a>
+            </p>
+        </div>
+        <div class="content">
+            <h3>Conclusion and Links</h3>
+            <p>
+                Identifying the ideal place to call home for UNB students necessitates a careful balance of factors crucial to their academic and personal growth. From the vibrant downtown scene to the serene riverfront, Fredericton emerges as an oasis for students seeking a 
+                supportive environment that combines academic excellence with a rich social life. The proximity to campus amenities and accessible public transportation further enhances the appeal of this city, offering convenience and connectivity for students pursuing their 
+                academic endeavors. As UNB continues to attract students from diverse backgrounds, the significance of finding the perfect home in Fredericton remains paramount, not only fostering a sense of belonging but also facilitating a fulfilling university experience. 
+                This pursuit of the ideal home embodies the essence of student life at UNB, where academic pursuits intertwine with community engagement and personal growth, laying the foundation for a successful and memorable journey through higher education. 
+            </p>
+            <p>
+                <ul>
+                    <li><a class="small-button" href="Data">Data for the Projects</a></li>
+                    <li><a class="small-button" href="Ideal_Home_Information.xlsx">Home Data Table</a></li>
+                    <li><a class="small-button" href="Maps">Maps</a></li>
+                    <li><a class="small-button" href="Model">Models</a></li>
+                    <li><a class="small-button" href="Images">Images</a></li>
+                    <li><a class="small-button" href="main.js">Javascript File</a></li>
+                    <li><a class="small-button" href="style.css">CSS File</a></li>
+                </ul>
+            </p>
+
+        </div>
+        
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
